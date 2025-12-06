@@ -29,7 +29,7 @@ class CheckoutSolution:
         total += (counts['P'] // 5) * 200 + (counts['P'] % 5) * 50  
         total += (counts['Q'] // 3) * 80 + (counts['Q'] % 3) * 30  
         total += (counts['U'] - counts['U'] // 4) * 40  
-        total += (counts['V'] // 3) * 130 + ((counts['V'] % 3) // 2) * 90  + (counts['V'] % 2) * 50
+        total += (counts['V'] // 3) * 130 + ((counts['V'] % 3) // 2) * 90  + ((counts['V'] % 3) % 2) * 50
 
         prices = {
             'C':20, 'D':15, 'E':40, 'G':20, 'I':35, 'J':60, 'L':90,
@@ -41,6 +41,7 @@ class CheckoutSolution:
             total += counts[item] * price
 
         return total
+
 
 
 
