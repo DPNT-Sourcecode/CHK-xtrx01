@@ -19,7 +19,15 @@ class CheckoutSolution:
         counts['Q'] = max(0, counts['Q'] - counts['R'] // 2 )
 
         total = 0 
+
         total += (counts['A'] // 5) * 200 + ((counts['A'] % 5) // 3) * 130 + ((counts['A'] % 5) % 3) * 50 
+
+        total += (counts['B'] // 2) * 45 + (counts['B'] % 2) * 30  
+        total += (counts['F'] - counts['F'] % 3) * 10
+        total += (counts['H'] // 10) * 80 + ((counts['H'] % 10) //5) * 45 + (counts['H'] % 5) * 10   
+        total += (counts['K'] // 2) * 150 + (counts['K'] % 2) * 80  
+        total += (counts['P'] // 5) * 200 + (counts['P'] % 5) * 50  
+        total += (counts['P'] // 5) * 200 + (counts['P'] % 5) * 50  
 
         free_b_e = e // 2
         b = max(0, b - free_b_e)
@@ -34,4 +42,5 @@ class CheckoutSolution:
         f_total = f_to_pay * 10
 
         return a_total + b_total + c_total + d_total + e_total + f_total
+
 
