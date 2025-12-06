@@ -18,4 +18,3 @@ class CheckoutSolution:
         d = skus.count('D')
         
         return (a//3)*130 + (a%3)*50 + (b//2)*45 + (b%2)*30 + c*20 + d*15
-
