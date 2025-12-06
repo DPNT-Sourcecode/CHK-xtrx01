@@ -35,4 +35,3 @@ class CheckoutSolution:
 
         return a_total + b_total + c_total + d_total + e_total + f_total
 
-
