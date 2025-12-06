@@ -21,6 +21,7 @@ class CheckoutSolution:
         free_b_e = e // 2
         b = max(0, b - free_b_e)
 
+        a_total = 0
 
         five_a = a // 5
         a_total += five_a * 200
@@ -39,5 +40,6 @@ class CheckoutSolution:
         e_total = e * 40
 
         return a_total + b_total + c_total + d_total + e_total
+
 
 
