@@ -6,8 +6,6 @@ class CheckoutSolution:
         if not isinstance(skus, str):
             return -1 
 
-        skus = skus.upper()
-        
         valid_items = {'A','B','C','D','E'}
 
         for char in skus:
@@ -42,4 +40,5 @@ class CheckoutSolution:
         e_total = e * 40
 
         return a_total + b_total + c_total + d_total + e_total
+
 
