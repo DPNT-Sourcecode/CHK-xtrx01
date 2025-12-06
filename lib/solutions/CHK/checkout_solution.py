@@ -27,20 +27,20 @@ class CheckoutSolution:
         total += (counts['H'] // 10) * 80 + ((counts['H'] % 10) //5) * 45 + (counts['H'] % 5) * 10   
         total += (counts['K'] // 2) * 150 + (counts['K'] % 2) * 80  
         total += (counts['P'] // 5) * 200 + (counts['P'] % 5) * 50  
-        total += (counts['P'] // 5) * 200 + (counts['P'] % 5) * 50  
+        total += (counts['Q'] // 3) * 80 + (counts['Q'] % 3) * 30  
+        total += (counts['U'] - counts['U'] // 4) * 40  
+        total += (counts['V'] // 3) * 130 + ((counts['V'] % 3) // 2) * 90  + (counts['V'] % 2) * 50
 
-        free_b_e = e // 2
-        b = max(0, b - free_b_e)
+        prices = {
+            'C':20, 'D':15, 'E':40, 'G':20, 'I':35, 'J':60, 'L':90,
+            'M':15, 'N':40, 'O':10, 'R':50, 'S':30, 'T':20, 'W':20,
+            'X':90, 'Y':10, 'Z':50
+        }
+       
+        for item, price in prices.items():
+            total += counts[item] * price
 
-        f_to_pay = f - (f // 3)
+        return total
 
-        a_total = (a // 5) * 200 + ((a % 5) // 3) * 130 + ((a % 5) % 3) * 50
-        b_total = (b // 2) * 45 + (b % 2) * 30 
-        c_total = c * 20
-        d_total = d * 15
-        e_total = e * 40
-        f_total = f_to_pay * 10
-
-        return a_total + b_total + c_total + d_total + e_total + f_total
 
 
