@@ -8,3 +8,7 @@ class TestSum():
     def test_sum(self):
         assert SumSolution().compute(1, 2) == 3
 
+if __name__ == '__main__':
+    test = TestSum()
+    test.test_sum()
+    print('Test passed')
