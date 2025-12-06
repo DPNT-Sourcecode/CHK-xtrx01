@@ -24,7 +24,7 @@ class CheckoutSolution:
 
         f_to_pay = f - (f // 3)
 
-        a_total = (a // 5) * 200 + ((a % 5) // 3) * 130 + ((a % 5) // 3) * 50
+        a_total = (a // 5) * 200 + ((a % 5) // 3) * 130 + ((a % 5) % 3) * 50
         b_total = (b // 2) * 45 + (b % 2) * 30 
         c_total = c * 20
         d_total = d * 15
@@ -32,6 +32,7 @@ class CheckoutSolution:
         f_total = f_to_pay * 10
 
         return a_total + b_total + c_total + d_total + e_total + f_total
+
 
 
 
